@@ -11,3 +11,12 @@ header h3, header h1{
 }
 .poster img{width:300px;}
 
+aside.answer p{
+	font-size: 1.5em;
+}
+.answer p{
+	display: none;
+}
+.yes{
+	border:1px solid red;
+}
