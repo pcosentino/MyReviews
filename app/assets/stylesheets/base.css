@@ -18,5 +18,5 @@ aside.answer p{
 	display: none;
 }
 .yes{
-	border:1px solid red;
+	display: block;
 }
