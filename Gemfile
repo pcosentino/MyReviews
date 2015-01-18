@@ -30,6 +30,7 @@ group:development do
      gem 'sqlite3'
      gem 'pry'
      gem 'puma'
+     gem 'haml-rails', '>= 0.3.4'
 end
 
 group:production do
