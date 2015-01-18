@@ -14,9 +14,9 @@ header h3, header h1{
 aside.answer p{
 	font-size: 1.5em;
 }
-.answer p{
+.correct, .incorrect, .explanation{
 	display: none;
 }
-.yes{
+.bob{
 	display: block;
 }
