@@ -1,3 +1,6 @@
+$mobile: "(max-width: 767px)";
+
+
 header{
 	margin: 1.5em 0; 
 	text-align: center;
@@ -23,4 +26,12 @@ aside.answer{
 }
 .show{
 	display: block;
+}
+
+@media #{$mobile} {
+  section.poster img {
+    margin:0 auto;
+    width:340px;
+  }
+
 }
