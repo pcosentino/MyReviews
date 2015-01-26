@@ -1,5 +1,8 @@
 %main.container
   %h1 Listing Reviews
+  %aside#new-review
+    = link_to 'New Review', new_review_path 
+
   %div#reviews.well 
     - @reviews.each do |review|
       %h4= review.title
@@ -8,4 +11,3 @@
         %p= link_to 'Show', review
         / %p= link_to 'Edit', edit_review_path(review)
         / %p= link_to 'Destroy', review, :method => :delete, :data => {:confirm => 'Are you sure?'}
-  = link_to 'New Review', new_review_path 
