@@ -11,8 +11,7 @@
     = f.text_field :title
   .field
     = f.label :rating
-    = f.text_field :rating
-    / = f.select :rating, options_for_select([["*", "*"], ["**", "**"], ["***", "***"], ["****", "****"], ["*****", "*****"]])
+    = f.select :rating, options_for_select([["*", "*"], ["**", "**"], ["***", "***"], ["****", "****"], ["*****", "*****"]])
   .field
     = f.label :review
     = f.text_area :body
