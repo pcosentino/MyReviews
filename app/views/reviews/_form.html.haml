@@ -11,13 +11,7 @@
     = f.text_field :title
   .field
     = f.label :rating
-    %select
-      %option{:value => "-"} -Select-
-      %option{:value => "1"} *
-      %option{:value => "2"} **
-      %option{:value => "3"} ***
-      %option{:value => "4"} ****
-      %option{:value => "5"} *****
+    = f.select :rating, options_for_select([["*", "*"], ["**", "**"], ["***", "***"], ["****", "****"], ["*****", "*****"]])
   .field
     = f.label :review
     = f.text_area :body
