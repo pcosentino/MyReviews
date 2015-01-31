@@ -1,16 +1,16 @@
 %p#notice= notice
 
 %p
-  %b Name:
+  %strong Name:
   = @review.title
 %p
-  %b City:
+  %strong City:
   = @review.city
+%p.inline
+  %strong Rating:
+  .rating= @review.rating
 %p
-  %b Rating:
-  = @review.rating
-%p
-  %b Review:
+  %strong Review:
   = @review.body
 
 = link_to 'Back', reviews_path
