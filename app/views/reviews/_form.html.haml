@@ -17,7 +17,7 @@
     = f.text_field :date, :class => "date"
   .field
     = f.label :rating
-    = f.select :rating, options_for_select([["*", "*"], ["**", "**"], ["***", "***"], ["****", "****"], ["*****", "*****"]])
+    = f.select :rating, options_for_select([["1 Star", "E"], ["2 Stars", "EE"], ["3 Stars", "EEE"], ["4 Stars", "EEEE"], ["5 Stars", "EEEEE"]])
   .field
     = f.label :review
     = f.text_area :body

@@ -6,7 +6,7 @@
   %div#reviews.well 
     - @reviews.each do |review|
       %p.rating= review.rating
-      %h4.name= review.title
+      %h3.name= review.title
       %h5.city= review.city
       %h5.date= review.date
       %p.review= truncate(review.body, length: 100)
