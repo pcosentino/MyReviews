@@ -1,11 +1,12 @@
 %main.container
   %h1 Listing Reviews
   %aside#new-review
-    = link_to 'New Review', new_review_path 
+    = link_to 'New Review', new_review_path
 
   %div#reviews.well 
     - @reviews.each do |review|
       %h4= review.title
+      %h4= review.date
       %p= review.rating
       %p= truncate(review.body, length: 100)
       %aside

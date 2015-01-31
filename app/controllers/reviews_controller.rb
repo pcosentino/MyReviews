@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_filter :authenticate, :except => [:create, :new, :index, :show ]
+  before_filter :authenticate, :except => [:destroy, :create, :new, :index, :show ]
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   # GET /reviews
@@ -75,6 +75,6 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:title, :rating, :body)
+      params.require(:review).permit(:title, :date, :rating, :body)
     end
 end

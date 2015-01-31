@@ -11,3 +11,5 @@ $(document).ready(function(){
 		$(".explanation").addClass("show");	
 	});
 });
+
+
