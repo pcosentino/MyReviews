@@ -9,11 +9,24 @@
   .field
     = f.label :name
     = f.text_field :title
+  .field.date
+    = f.label :date
+    = f.text_field :date, :class => "date"
   .field
     = f.label :rating
     = f.select :rating, options_for_select([["*", "*"], ["**", "**"], ["***", "***"], ["****", "****"], ["*****", "*****"]])
   .field
     = f.label :review
     = f.text_area :body
-  .actions
-    = f.submit 'Save'
+
+  .actions.save
+    = f.submit 'Save', :id => "save"
+
+////////////// ADDING THE CURRENT DATE //////////////////
+%script
+  var currdate = new Date();
+  var currdate = (currdate.getMonth()+ 1) + "/" + currdate.getDate() + "/" + currdate.getFullYear();
+     
+  $("#save").click(function(){
+  $('.date').val(currdate)
+  });

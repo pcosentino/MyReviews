@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128231647) do
+ActiveRecord::Schema.define(version: 20150131002448) do
 
   create_table "reviews", force: true do |t|
     t.string   "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20150128231647) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "rating"
+    t.string   "date"
   end
 
 end
