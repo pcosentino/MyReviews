@@ -5,10 +5,11 @@
 
   %div#reviews.well 
     - @reviews.each do |review|
-      %h4= review.title
-      %h4= review.date
-      %p= review.rating
-      %p= truncate(review.body, length: 100)
+      %p.rating= review.rating
+      %h4.name= review.title
+      %h5.city= review.city
+      %h5.date= review.date
+      %p.review= truncate(review.body, length: 100)
       %aside
         %p= link_to 'Show', review
 
