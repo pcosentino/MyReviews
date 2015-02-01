@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_filter :authenticate, :except => [:destroy, :edt, :create, :new, :index, :show ]
+  before_filter :authenticate, :except => [:destroy, :edit, :create, :new, :index, :show ]
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   # GET /reviews
