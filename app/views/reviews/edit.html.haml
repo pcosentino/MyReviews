@@ -1,6 +1,17 @@
-%h1 Editing review
+%h1 Reply To The Review
 
-= render 'form'
+/ = render 'form'
+
+= form_for @review do |f|
+  .field
+    = f.label :reply
+    = f.text_area :reply
+
+
+  .actions.save
+    = f.submit 'Save', :id => "save"
+
+    
 
 = link_to 'Show', @review
 \|

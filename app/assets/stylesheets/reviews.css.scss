@@ -48,6 +48,15 @@
 	.review{
 
 	}
+	.reply{
+		margin-left:10%;
+		.logo{
+			background:url("freedom.jpg");
+			width:25px;
+			height:25px;
+			display: block; 
+		}
+	}
 	aside {
 		border-bottom:1px solid #ABABAB;
 		margin-bottom:3em;
@@ -55,6 +64,10 @@
 			display:inline;
 		}
 	}
+}
+textarea {
+	height: 10em;
+	width: 20em;
 }
 p.inline{display:inline;}
 .rating{
