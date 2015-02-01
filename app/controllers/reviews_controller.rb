@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_filter :authenticate, :except => [:destroy, :edit, :create, :new, :index, :show ]
+  before_filter :authenticate, :except => [:destroy, :create, :new, :index, :show ]
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   # GET /reviews
@@ -65,7 +65,7 @@ class ReviewsController < ApplicationController
   private
   def authenticate
     authenticate_or_request_with_http_basic do |name, password|
-      name == "admin" && password == "secret"
+      name == "freedom" && password == "freedom"
     end
   end
     # Use callbacks to share common setup or constraints between actions.
