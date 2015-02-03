@@ -34,7 +34,10 @@
 		content:")";
 		vertical-align:bottom;	
 	}
-	.date{color:red;}
+	.date{
+		color:#ff4d4d;
+		float: right;
+	}
 	.rating{
 		font-family: "stars";
 		color: rgb(255, 232, 0);
@@ -46,7 +49,7 @@
 		margin:0;
 	}
 	.review{
-
+		padding:1em 0;
 	}
 	.reply{
 		margin-left:10%;
@@ -54,7 +57,8 @@
 			background:url("freedom.jpg");
 			width:25px;
 			height:25px;
-			display: block; 
+			display: inline-block; 
+			margin-right:1%;
 		}
 	}
 	aside {
