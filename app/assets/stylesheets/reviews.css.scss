@@ -10,7 +10,9 @@
        font-url('stars.ttf')  format('truetype'), /* Safari, Android, iOS */
        font-url('stars.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
-
+#notice{
+	background:#7fd97f;
+}
 #reviews {
 	background:#f5f5f5;
 	h3, h5 {

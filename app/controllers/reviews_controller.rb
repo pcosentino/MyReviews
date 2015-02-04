@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_filter :authenticate, :except => [:create, :new, :index, :show ]
+  before_filter :authenticate, only: [:edit]
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   # GET /reviews
@@ -20,6 +20,7 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1/edit
   def edit
+    render :action => :edit
   end
 
   # POST /reviews
@@ -43,7 +44,7 @@ class ReviewsController < ApplicationController
   def update
     respond_to do |format|
       if @review.update(review_params)
-        format.html { redirect_to @review, notice: 'Review was successfully updated.' }
+        format.html { redirect_to "/reviews", notice: 'Review was successfully updated.' }
         format.json { render :show, status: :ok, location: @review }
       else
         format.html { render :edit }
@@ -64,10 +65,15 @@ class ReviewsController < ApplicationController
 
   private
   def authenticate
-    authenticate_or_request_with_http_basic do |name, password|
-      name == "freedom" && password == "freedom"
+    authenticate_or_request_with_http_basic do |username, password|
+      if(username == "freedom" && password == "freedom")
+        true
+      else
+        redirect_to "/reviews"
+      end
     end
   end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_review
       @review = Review.find(params[:id])
