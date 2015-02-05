@@ -69,7 +69,7 @@ class ReviewsController < ApplicationController
       if(username == "freedom" && password == "freedom")
         true
       else
-        redirect_to "/reviews"
+        redirect_to (reviews_url) and return false
       end
     end
   end
