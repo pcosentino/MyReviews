@@ -1,10 +1,11 @@
-%p#notice= notice
+%p#notice You are now logged in
 
 %main.container
   %h1 Listing Reviews
   %aside#new-review
     = link_to 'New Review', new_review_path
-    = link_to 'login', "/admin/reviews", :id =>"login"
+    = link_to 'logout', "/reviews", :id =>"logout"
+
 
   %div#reviews.well 
     - @reviews.each do |review|
@@ -14,7 +15,8 @@
       %h5.date= review.date
       %p.review= truncate(review.body, length: 100)
       %p.reply
-        %a.logo
+        = link_to '', edit_review_path(review), :class => "logo"
         = review.reply
       %aside
         %p= link_to 'Show', review
+        %p= link_to 'Destroy', review, :method => :delete, :data => {:confirm => 'Are you sure?'}

@@ -1,4 +1,5 @@
-class ReviewsController < ApplicationController
+class Admin::ReviewsController < ApplicationController
+  before_filter :authenticate
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   # GET /reviews
@@ -19,7 +20,6 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1/edit
   def edit
-    render :action => :edit
   end
 
   # POST /reviews
@@ -63,6 +63,12 @@ class ReviewsController < ApplicationController
   end
 
   private
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      username == "freedom" && password == "freedom"
+    end
+  end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_review
       @review = Review.find(params[:id])
