@@ -65,7 +65,7 @@ class Admin::ReviewsController < ApplicationController
   private
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
-      username == "freedom" && password == "freedom"
+      username == "username" && password == "password"
     end
   end
 
