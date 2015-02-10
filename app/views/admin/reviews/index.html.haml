@@ -1,11 +1,10 @@
-%p#notice You are now logged in
+%p#notice You are now logged in as Admin
 
 %main.container
   %h1 Listing Reviews
   %aside#new-review
-    = link_to 'New Review', new_review_path
     = link_to 'logout', "/reviews", :id =>"logout"
-
+    %div.clear
 
   %div#reviews.well 
     - @reviews.each do |review|
@@ -15,7 +14,7 @@
       %h5.date= review.date
       %p.review= truncate(review.body, length: 100)
       %p.reply
-        = link_to '', edit_admin_review_path(review), :class => "logo"
+        = link_to 'reply', edit_admin_review_path(review), :class => "logo"
         = review.reply
       %aside
         %p= link_to 'Show', admin_review_path(review)
