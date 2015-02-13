@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
+gem 'devise'
 
 group:development do
      gem 'sqlite3'
@@ -20,6 +21,7 @@ group:development do
 end
 
 group:production do
+  gem 'devise'
 	gem 'pg', '0.15.1'
 	gem 'rails_12factor', '0.0.2'
 end
