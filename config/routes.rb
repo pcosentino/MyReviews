@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :reviews
   
   namespace :admin do 
@@ -6,6 +7,6 @@ Rails.application.routes.draw do
   	
   end
   
-  root :to => "pages#index"
+  root :to => "reviews#index"
 
 end
