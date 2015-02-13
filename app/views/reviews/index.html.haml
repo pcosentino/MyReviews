@@ -1,10 +1,7 @@
-%p#notice= notice
-
 %main.container
   %h1 Listing Reviews
   %aside#new-review
     = link_to 'New Review', new_review_path
-    = link_to 'login', "/admin/reviews", :id =>"login"
 
   %div#reviews.well 
     - @reviews.each do |review|

@@ -16,6 +16,7 @@ group:development do
      gem 'sqlite3'
      gem 'pry'
      gem 'puma'
+     gem 'devise'
 end
 
 group:production do
