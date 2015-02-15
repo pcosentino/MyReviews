@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
-  before_action :authenticate_user!, :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :set_review, only: [:show, :edit, :update, :destroy]
+  
   # GET /reviews
   # GET /reviews.json
   def index
@@ -42,7 +44,7 @@ class ReviewsController < ApplicationController
   def update
     respond_to do |format|
       if @review.update(review_params)
-        format.html { redirect_to "/admin/reviews", notice: 'Review was successfully updated.' }
+        format.html { redirect_to "/reviews", notice: 'Review was successfully updated.' }
         format.json { render :show, status: :ok, location: @review }
       else
         format.html { render :edit }
@@ -51,6 +53,13 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @review.destroy
+    respond_to do |format|
+      format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
