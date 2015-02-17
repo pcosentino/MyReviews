@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'devise'
 gem "cancan"
+gem 'shadowbox-rails'
 
 group:development do
      gem 'sqlite3'

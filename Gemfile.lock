@@ -116,6 +116,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    shadowbox-rails (0.0.4)
+      sass-rails
     slop (3.4.7)
     spring (1.2.0)
     sprockets (2.12.3)
@@ -159,6 +161,7 @@ DEPENDENCIES
   rails_12factor (= 0.0.2)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  shadowbox-rails
   spring
   sqlite3
   turbolinks
