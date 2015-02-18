@@ -2,7 +2,7 @@
   %h1 Listing Reviews
   %aside#new-review
     = link_to 'New Review', new_review_path
-  = render 'new' 
+  = render 'sessions/new' 
   .clear
   %div#reviews.well 
     - @reviews.each do |review|
@@ -15,8 +15,8 @@
         %a.logo
         = review.reply
       %aside
-        / %p= link_to 'Show', review
-        %p= link_to("Show", review, :rel => 'shadowbox;width=500;height=600;')
+        =link_to 'Show', review_path(review), class: "fancybox.ajax various"
+        
         - if can? :update, Review
           %p= link_to 'Reply', edit_review_path(review), :class => "logo"
           %p= link_to 'Destroy', review, :method => :delete, :data => {:confirm => 'Are you sure?'}

@@ -98,4 +98,8 @@ p.inline{display:inline;}
 .login a{
 	float:right;
 }
+.login.container{
+	text-align: right;
+	margin-left: -30px;
+}
 #sb-wrapper-inner{overflow:scroll;}
