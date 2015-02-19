@@ -12,15 +12,16 @@ $(document).ready(function(){
 	});
 
   $(".various").fancybox({
+  	padding 	: 50, 
 		maxWidth	: 800,
 		maxHeight	: 600,
 		fitToView	: false,
 		width		: '70%',
 		height		: '70%',
-		autoSize	: false,
+		autoSize	: true,
 		closeClick	: false,
 		openEffect	: 'fade',
-		closeEffect	: 'fade',
+		closeEffect	: 'elastic',
 		afterClose : function () {
 			parent.location.reload(true);	
 		}

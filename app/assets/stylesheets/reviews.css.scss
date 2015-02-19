@@ -28,7 +28,7 @@
 		vertical-align:bottom;
 	}
 	.city{
-		color:#4c4cff;
+		color:#30529D;
 		display:inline;
 		vertical-align:bottom;
 	}
@@ -41,30 +41,14 @@
 		vertical-align:bottom;	
 	}
 	.date{
-		color:#ff4d4d;
+		color:#eb540a;
 		float: right;
-	}
-	.rating{
-		font-family: "stars";
-		color: rgb(255, 232, 0);
-		font-size: 2.5em;
-		background: #4c4cff;
-		border-radius: 10px;
-		display: inline-block;
-		padding-right: 5px;
-		margin:0;
 	}
 	.review{
 		padding:1em 0;
 	}
 	.reply{
 		margin-left:10%;
-		.logo{
-			width:25px;
-			height:25px;
-			display: inline-block; 
-			margin-right:1%;
-		}
 	}
 	aside {
 		border-bottom:1px solid #ABABAB;
@@ -74,19 +58,33 @@
 		}
 	}
 }
+.actions{
+	p{
+		margin-left:.5em
+	}
+}
 #new-review{
 	float:left;
 }
+a.btn{
+	background: #428bca;
+	color: #fff;
+	margin-bottom: 1em;
+	&:hover{
+		color:#fff;
+		background:#255680;
+	}
+}
 textarea {
 	height: 10em;
-	width: 20em;
+	width: 100%;
 }
 p.inline{display:inline;}
 .rating{
 	font-family: "stars";
-	color: rgb(255, 232, 0);
-	font-size: 2.5em;
-	background: #4c4cff;
+	color: #F5CD03;
+	font-size: 2em;
+	background: #02779e;
 	border-radius: 10px;
 	display: inline-block;
 	padding-right: 5px;
@@ -103,3 +101,22 @@ p.inline{display:inline;}
 	margin-left: -30px;
 }
 #sb-wrapper-inner{overflow:scroll;}
+
+
+.fancybox-inner form.new_user .field label{width:80%;}
+
+.fancybox-inner{
+	h1, h2, h3{
+		margin-top:0;
+	}
+	form{
+		width:100%;
+		.field{
+			text-align: left;
+			padding-bottom:3%;
+			label{
+				width:20%;
+			}
+		}
+	}
+}

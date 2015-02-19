@@ -1,7 +1,7 @@
 %main.container
   %h1 Listing Reviews
   %aside#new-review
-    = link_to 'New Review', new_review_path, class: "fancybox.ajax various"
+    = link_to 'New Review', new_review_path, class: "fancybox.ajax various btn"
   = render 'sessions/new' 
   .clear
   %div#reviews.well 
@@ -14,9 +14,9 @@
       %p.reply
         %a.logo
         = review.reply
-      %aside
+      %aside.actions
         =link_to 'Show', review_path(review), class: "fancybox.ajax various"
         
         - if can? :update, Review
-          %p= link_to 'Reply', edit_review_path(review), :class => "logo"
+          %p= link_to 'Reply', edit_review_path(review), :class => "logo", class: "fancybox.ajax various"
           %p= link_to 'Destroy', review, :method => :delete, :data => {:confirm => 'Are you sure?'}
