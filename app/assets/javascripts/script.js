@@ -11,7 +11,6 @@ $(document).ready(function(){
 		$(".explanation").addClass("show");	
 	});
 
-
   $(".various").fancybox({
   	padding 	: 50, 
 		maxWidth	: 800,
@@ -27,15 +26,7 @@ $(document).ready(function(){
 			parent.location.reload(true);	
 		}
 		});
-
-
-  var currdate = new Date();
-  var currdate = (currdate.getMonth()+ 1) + "/" + currdate.getDate() + "/" + currdate.getFullYear();
-     
-  $("#save").click(function(){
-  $('.date').val(currdate)
-  });
-
+  
 });
 
 

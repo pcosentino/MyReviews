@@ -25,3 +25,12 @@
 
   .actions.save
     = f.submit 'Save', :id => "save"
+
+////////////// ADDING THE CURRENT DATE //////////////////
+%script
+  var currdate = new Date();
+  var currdate = (currdate.getMonth()+ 1) + "/" + currdate.getDate() + "/" + currdate.getFullYear();
+     
+  $("#save").click(function(){
+  $('.date').val(currdate)
+  });
